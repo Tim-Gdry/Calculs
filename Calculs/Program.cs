@@ -14,7 +14,7 @@ namespace Calculs
             int val1, val2; // mémorisation de nombres aléatoires
             int solution; // calcul de la solution
             int reponse; // saisie de la réponse de l'utilisateur
-            int choix; // saisie du choix de l'utilsiateur
+            int choix; // saisie du choix de l'utilisateur
 
             // boucle sur le menu
             choix = 1;
@@ -26,14 +26,17 @@ namespace Calculs
                 Console.WriteLine("Quitter ........................ 0");
                 Console.Write("Choix :                          ");
                 choix = int.Parse(Console.ReadLine());
+
                 // traitement des choix
                 if (choix != 0)
                 {
+                    // Génération des nombres aléatoires (placées avant le if)
+                    val1 = rand.Next(1, 10);
+                    val2 = rand.Next(1, 10);
+
                     if (choix == 1)
                     {
                         // choix de l'addition
-                        val1 = rand.Next(1, 10);
-                        val2 = rand.Next(1, 10);
                         // saisie de la réponse
                         Console.Write(val1 + " + " + val2 + " = ");
                         reponse = int.Parse(Console.ReadLine());
@@ -51,8 +54,6 @@ namespace Calculs
                     else
                     {
                         // choix de la multiplication
-                        val1 = rand.Next(1, 10);
-                        val2 = rand.Next(1, 10);
                         // saisie de la réponse
                         Console.Write(val1 + " x " + val2 + " = ");
                         reponse = int.Parse(Console.ReadLine());
